@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Tektronix 7000 Series Instrument Driver Readme</title>
+</head>
+<body>
+<h2> Tektronix 7000 Series Instrument Driver Readme</h2>
+<para>To rate this instrument driver, go to the driver download page on the <a href="http://www.ni.com/idnet">Instrument Driver Network</a>.
+</para>
+<h4>1. Overview</h4>
+<para>
+Instrument Driver Technology: LabVIEW Plug and Play (project-style)
+<br>
+Manufacturer: Tektronix
+<br>
+Supported Language(s): LabVIEW
+<br><br>
+Supported Model(s): DPO7054,DPO7104,DPO7254, DPO7354,DPO70404,DPO70604,DPO70804,DPO71254,DPO71604,DPO72004,DSA70404,DSA70604,DSA70804,
+DSA71254,DSA71604,DSA72004,TDS5032,TDS5032B,TDS5052,TDS5052B,TDS5104,TDS5104B,TDS5034,TDS5034B,
+TDS5054,TDS5054B,TDS5054BE, TDS6124C,TDS6154C,TDS6404,TDS6604,TDS6604B,TDS6804B,
+TDS7054,TDS7104,TDS7154,TDS7154B,TDS7254,TDS7254B,TDS7404,TDS7404B,TDS7704B
+CSA7000,CSA7000B,CSA7154,CSA7404,CSA7404B,MSO70404,MSO70604,MSO70804,MSO71254,MSO71604,MSO72004	
+DPO71254C, DPO71604C, DPO72004C, DSA71254C, DSA71604C, DSA72004C, MSO71254C, MSO71604C, MSO72004C
+MSO5034, MSO5054, MSO5104, MSO5204, DPO5034, DPO5054, DPO5104, DPO5204
+<br><br>
+Model(s) Tested: DPO7254,TDS5104,TDS6604,TDS7104,CSA7404, MSO70804, MSO5104
+<br>
+Interface(s): GPIB, Ethernet
+<br>
+Firmware Revision(s) Tested: 2.0.3 (DPO7254), 5.2.1 (MSO70804), 6.0.0 Build 21(MSO5104)
+<br>
+Certified: Yes
+<br>
+NI Supported: Yes
+<br>
+Source Code Available: Yes
+<br>
+<br>
+Driver Revision: 4.1.1
+<br>
+Original Release Date:  09/20/2006 
+<br>
+Current Revision Date: 02/18/2016
+</para>
+<h4>2. Required Software</h4>
+<para>Some software components need to be installed before using this instrument driver. The minimum versions of these components are listed below, and can be downloaded from the Download Site.
+<br>
+<br>
+VISA 5.0 or later
+<br>
+<p> For LabVIEW 8.2 and LabVIEW 2009
+Refer to the <i>LabVIEW Help</i> for more information about software requirements. You access the <i>LabVIEW Help</i> by selecting <i>Help>>Search the LabVIEW Help</i>.</p>
+<p> For LabVIEW 2010 or later
+Refer to the <i>LabVIEW Help</i> for more information about software requirements. You access the <i>LabVIEW Help</i> by selecting <i>Help>>LabVIEW Help</i>.</p>
+<h4>3. Known Issues</h4>
+<!-- Include instrument functionality not supported by the driver or known issues as necessary. -->
+<para>
+To report issues or provide feedback about this instrument driver, please send an email to <a href="mailto:instrument.drivers@ni.com">instrument.drivers@ni.com</a>.</para>
+<br>
+<ol>
+<li>Not all VIs are supported by all instrument models.  This is documented throughout the instrument driver.  Refer to instrument documentation for more details pertaining to your specific model. <br>
+<li>The TDS 5000 series instruments do not support histogram measurements, despite being listed in the manual.<br>
+<li>For the older TDS models, models intermittently failed to process commands when multiple commands were issued. To address this issue delays were added after the VISA writes. This might not be an issue with the newer models.<br>
+<li>Tektronix sometimes may update firmware which might not be backwards compatible. If you can not use Configure Trigger (Window).vi and Configure Trigger (Video).vi, please update the firmware to the latest version.
+<li>Although all trigger VIs are implemented in the driver, not all of them have been tested with the live instrument. The VIs that haven't been tested are the ones that relative with VIDeo, I2C, CAN, SPI, RS232 trigger type.
+</ol>
+
+<h4>4. Revision History</h4>
+<para>The latest version of this and other LabVIEW and LabWindows/CVI instrument drivers can be downloaded at the <a href="http://www.ni.com/idnet">Instrument Driver Network</a>.<br>
+<br>
+REV 1.0,  LV 7.1 <br>
+Modified by: Feng Shi, NI<br>
+Original Release<br><br>
+REV 1.1, LV 7.1<br>
+Modified by: Feng Shi, NI<br>
+-Add support for DPO70000 and DSA70000<br>
+-Update the commands for Trigger Condition in tkdpo7k Configure Trigger (Window).vi<br>
+-Remove the Custom Scan Rate and custom value from the Format control in tkdpo7k Configure Trigger (Video).vi <br>
+-Add Custom Line Period and Custom Sync Interval<br><br>
+REV 1.2, LV 7.1, 04/03/2007<br>
+Modified by: Feng Shi, NI<br>
+-Add support for DPO7354, DPO71254,DPO71604,DPO72004,DSA71254,DSA71604 and DSA72004<br><br>
+REV 2.0<br>
+Modified by: NI<br> 
+Original release new project-style driver created from tkdpo7k plug and play driver version 1.2<br>
+<br>
+<!-- <Project-style updates only, newer updates were not made to the plug and play (LLB format) driver> -->
+REV 2.0.1<br>
+Modified by: NI<br> 
+Corrected order of Direction Command multi-line strings for Delay Edge1 and Delay Edge2 in Fetch Waveform Measurement (Time) VI<br>
+Updated the Instrument Driver Revision string constant in Revision Query VI <br>
+<br>
+REV 2.1, 01/04/2010<br>
+Modified by: Alvin Tang, Austin TX<br>
+Added Configure Cursors.vi.<br>
+<br>
+REV 3.0, 11/01/2010<br>
+Modified by: Haoran Feng, Shanghai<br>
+Add support for MSO/DSA 70000 series <br>
+Added<br> 
+Configure Bus Source(SPI-Select).vi.<br>
+Configure Bus Source(SPI-Clock).vi.<br>
+Configure Bus Source(SPI-Data).vi.<br>
+Configure Bus Source(I2C).vi.<br>
+Configure Bus Source(Parallel).vi.<br>
+Configure Digital Channel.vi.<br>
+<br>
+Modified<br>
+<strike>Configure SetupHold Trigger.vi</strike><br>
+Configure Timebase.vi<br>
+Configure Trigger(Edge).vi<br>
+Configure Trigger(Glitch).vi<br>
+Configure Trigger(Pattern).vi<br>
+Configure Trigger(Runt).vi<br>
+Configure Trigger(Setuphold).vi<br>
+Configure Trigger(State).vi<br>
+Configure Trigger(Timeout).vi<br>
+Configure Trigger(Transition).vi<br>
+Configure Trigger(Video).vi<br>
+Configure Trigger(Width).vi<br>
+Configure Trigger(Window).vi<br>
+<br>
+REV 4.0, 4/30/2011<br>
+Modified By: Lei Liu, Shanghai <br>
+Add support for MSO/DPO 5000 Series.<br>
+Modified VIs:<br>
+Configure Timebase.vi<br>
+ - Set the mode to manual before setting the record length. Configure Timebase.vi commands (HOR:MODE:RECO and HOR:MODE:SCA) are supported by firmware version 5.2.2 Build 3 or later<br>
+Initialize.vi<br>
+<br>
+REV 4.1, 10/4/2013<br>
+Modified By: Stephen Schwahn, Austin, TX.<br>
+Moved several duplicate VIs to the obsolete folder and standardized the Polymorphic "Configure Trigger.vi".<br>
+Added two VIs to the Polymorphic Configure Trigger VI that were missed in the original switch:<br>
+ - Configure Trigger (A Mode).vi<br>
+ - Configure Trigger (A to B Sequence).vi<br>
+<br>
+REV 4.1.1, 02/18/2016<br> 
+Modified by: NI<br>
+Configure Timebase.vi<br> - corrected REV 4.0 change to again support older TDS/CSA models.<br>
+</para>
+</body>
+</html>
