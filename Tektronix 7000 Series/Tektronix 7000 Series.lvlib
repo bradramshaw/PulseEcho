@@ -45,13 +45,13 @@ TDS 7254, TDS 7254B, TDS 7404, TDS 7404B, TDS 7704B, MSO72004, MSO71604, MSO7080
 			<Item Name="Configure Bus Source (SPI-Clock).vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Bus Source (SPI-Clock).vi"/>
 			<Item Name="Configure Bus Source (SPI-Data).vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Bus Source (SPI-Data).vi"/>
 			<Item Name="Configure Bus Source (SPI-Select).vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Bus Source (SPI-Select).vi"/>
-			<Item Name="Configure Channel.vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Channel.vi"/>
+			<Item Name="Configure Channel.vi" Type="VI" URL="../Public/Configure/Configure Channel.vi"/>
 			<Item Name="Configure Continuous Acquisition.vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Continuous Acquisition.vi"/>
 			<Item Name="Configure Cursors.vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Cursors.vi"/>
 			<Item Name="Configure Digital Channel.vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Digital Channel.vi"/>
 			<Item Name="Configure Histogram.vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Histogram.vi"/>
 			<Item Name="Configure Measurement.vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Measurement.vi"/>
-			<Item Name="Configure Timebase.vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Timebase.vi"/>
+			<Item Name="Configure Timebase.vi" Type="VI" URL="../Public/Configure/Configure Timebase.vi"/>
 			<Item Name="Configure Trigger.vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Trigger.vi"/>
 			<Item Name="Configure Trigger (A Mode).vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Trigger (A Mode).vi"/>
 			<Item Name="Configure Trigger (A to B Sequence).vi" Type="VI" URL="/&lt;instrlib&gt;/Tektronix 7000 Series/Public/Configure/Configure Trigger (A to B Sequence).vi"/>
