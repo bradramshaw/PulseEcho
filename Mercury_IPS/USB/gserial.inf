@@ -1,0 +1,57 @@
+[Version]
+Signature="$Windows NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%LINUX%
+DriverVer = 16/10/2011,1.2
+
+
+[Manufacturer]
+%LINUX%=GSerialDeviceList, NTx86, NTamd64, NTia64
+
+[GSerialDeviceList]
+%GSERIAL%=GSerialInstall, USB\VID_0525&PID_A4A7
+
+[DestinationDirs]
+DefaultDestDir=10,System32\Drivers
+
+[GSerialDeviceList.NTx86]
+%GSERIAL%=GSerialInstall, USB\VID_0525&PID_A4A7
+
+[GSerialDeviceList.NTamd64]
+%GSERIAL%=GSerialInstall, USB\VID_0525&PID_A4A7
+
+[GSerialDeviceList.NTia64]
+%GSERIAL%=GSerialInstall, USB\VID_0525&PID_A4A7
+
+[GSerialInstall]
+CopyFiles=GSerialCopyFiles
+AddReg=GSerialAddReg
+
+[GSerialCopyFiles]
+usbser.sys
+
+[DestinationDirs]
+DefaultDestDir = 10
+GSerialCopyFiles = 12
+
+[GSerialAddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,usbser.sys
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[GSerialInstall.Services]
+AddService = usbser,0x0002,GSerialService
+
+[GSerialService]
+DisplayName = %GSERIAL_DISPLAY_NAME%
+ServiceType = 1                  ; SERVICE_KERNEL_DRIVER
+StartType = 3                    ; SERVICE_DEMAND_START
+ErrorControl = 1                 ; SERVICE_ERROR_NORMAL
+ServiceBinary = %10%\System32\Drivers\usbser.sys
+LoadOrderGroup = Base
+
+[Strings]
+LINUX = "Linux"
+GSERIAL = "Gadget Serial"
+GSERIAL_DISPLAY_NAME = "USB Gadget Serial Driver"
