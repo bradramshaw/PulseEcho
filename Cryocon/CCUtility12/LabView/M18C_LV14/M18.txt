@@ -1,0 +1,59 @@
+NAME
+	M18 - LabView driver for the Cryogenic Control Systems temperature monitors including
+	Model 18/ 18C / 18I,  Model 14/ 14C/ 14i, Model 12/ 12C/ 12i
+		using the VISA interface.
+		Note, Two and four channel monitors also use this library
+		*****version for LabView 14*****
+
+DESCRIPTION
+	The Model 18 is a eight-channel cryogenic temperature monitor with
+	serial (RS-232) and Ethernet remote interfaces.
+
+CONTACT
+	For information or technical support, contact:
+		Cryogenic Control Systems, Inc.
+		PO Box 7012
+		Rancho Santa Fe, CA 92067
+
+		858 756 3900
+
+		cctechsupport@cryocon.com
+
+FILES
+	M18.TXT
+		this file
+	M18TCP.llb
+		Library of VIs
+	M18TCPU.llb
+		Library of VIs that the end user should not modify directly.
+
+VIs
+	[Application]
+	M18_Icon_Tree.vi
+		A listing of all VIs available in this library.
+	
+	[Low Level]
+	M18_Initialize.vi
+		Opens the instrument.
+	
+	M18_Close.vi
+		Closes the instrument.
+
+	M18_IO.vi
+		Sends an ASCII command and returns the instrument's response.
+		Attaches line terminator character to command.
+
+	M18_Read.vi
+		Read string from instrument.
+
+	M18_WriteCmd.vi
+		Write ASCII command string to instrument. String must include
+		terminator character (\n).
+
+	M18_Error.vi
+		Generic error handler.
+
+	M18_Error_Handler.vi
+		Used by CC_Error to handle error messages and request user
+		response.
+	

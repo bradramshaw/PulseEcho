@@ -1,0 +1,72 @@
+NAME
+	CCM44 - LabView driver for the Cryocon Model 44 temperature controller
+		using the RS232 and IEEE-488 interface.
+		       *****LabView 7.1*****
+SYNOPSIS
+	VIs have a prefix 'CC'.
+
+DESCRIPTION
+	The Model 44 is a four-channel cryogenic temperature controller with
+	100/10 Base-T Ethernet, serial (RS-232) and GPIB (IEEE-488.2) remote interfaces. 
+	The serial and GPIB interfaces use the 'Visa' libraries and the
+	Ethernet interface uses the TCP libraries.
+
+CONTACT
+	For information or technical support, contact:
+		Cryogenic Control Systems, Inc.
+		PO Box 7012
+		Rancho Santa Fe, CA 92067
+
+		858-756-3900
+
+		techsupport@cryocon.com
+
+FILES
+	CCM44.TXT
+		this file
+	CCM44.llb
+		Library of VIs
+	CCM44U.llb
+		Library of low level VIs that the end user should not modify directly.
+	CC44_Examples.llb
+		Various examples. These include the open and close functions as
+		well as calling various VIs to demonstrate their function.
+
+VIs
+	[Application, CCM44.llb]
+	CC_Icon_Tree.vi
+		A listing of all VIs available in this library.
+	
+        CurveDownload.vi
+		Downloads a sensor calibration curve to the instrument.
+	
+	CC_DAQ.vi
+		Displays a strip chart of temperature.
+
+	[Low Level, CCM44U.llb]
+	CC Initialize.vi
+		Opens the instrument for communication. Selects
+		either RS-232 or GPIB (Visa).
+	
+	CC_Close.vi
+		Closes the instrument.
+
+	CC_IO.vi
+		Sends an ASCII command and returns the instrument's response.
+		Attaches line terminator character to command.
+
+	CC_Read.vi
+		Read string from instrument.
+
+	CC_WriteCmd.vi
+		Write ASCII command string to instrument.
+
+	CC_Error.vi
+		Generic error handler.
+
+	CC_Error_Handler.vi
+		Used by CC_Error to handle error messages and request user
+		response.
+	
+-----------------------------------------------------------------------	-
+(c)2009 Cryogenic Control Systems, Inc.

@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<Transactions>
+	<Model>Model24 Version 1.0</Model>
+	<Input>
+		<!----- CHA ----->
+		<Command>input a:isenix 20</Command>
+		<Pause>2000</Pause>
+		<Query>input a:temp?</Query>
+		<Command>input a:isenix 21</Command>
+		<Pause>2000</Pause>
+		<Query>input a:temp?</Query>
+		<!---- CHB------>
+		<Command>input b:isenix 20</Command>
+		<Pause>2000</Pause>
+		<Query>input b:temp?</Query>
+		<Command>input b:isenix 21</Command>
+		<Pause>2000</Pause>
+		<Query>input b:temp?</Query>
+	</Input>
+ 	<Loop>
+		<!------------ Loop 1 --------------->
+		<Command>Loop 1:SetPt 250</Command>
+		<Command>Loop 1:Type MAN</Command>
+		<Pause>2000</Pause>
+		<Command>control</Command>
+		<Pause>4000</Pause>
+		<Command>Stop</Command>
+	</Loop>
+	<Table>
+		<!The pause rate 100 ms will work with 9600baud and LAN>
+		<!Higher baud rate will require longer pause between entries.>
+		<!Download to table 6>
+		<Command>PIDTABLE 5:table</Command>
+		<Pause>100</Pause>
+		<!Table Name>
+		<Command>LOOP1 Htr</Command>
+		<Pause>100</Pause>
+		<!Table Entries>
+ 		<Command>310.00    1.60  160.00   40.00 HI</Command>
+		<Pause>100</Pause>
+ 		<Command>280.00    1.50  150.00   30.00 HI</Command> 
+		<Pause>100</Pause>
+ 		<Command>260.00    1.40  140.00   30.00 HI</Command> 
+		<Pause>100</Pause>
+ 		<Command>240.00    1.30  130.00   30.00 HI</Command> 
+		<Pause>100</Pause>
+ 		<Command>220.00    1.20  120.00   30.00 HI</Command> 
+		<Pause>100</Pause>
+ 		<Command>200.00    1.10  110.00   20.00 HI</Command> 
+		<Pause>100</Pause>
+ 		<Command>180.00    1.00  100.00   20.00 MID</Command>
+		<Pause>100</Pause>
+ 		<Command>160.00    0.90   90.00   20.00 MID</Command>
+		<Pause>100</Pause>
+ 		<Command>140.00    0.80   80.00   20.00 MID</Command>
+		<Pause>100</Pause>
+	 	<Command>120.00    0.70   70.00   10.00 MID</Command>
+		<Pause>100</Pause>
+		<Command>100.00    0.60   60.00   10.00 MID</Command>
+		<Pause>100</Pause>
+  		<Command>80.00    0.50   50.00   10.00 MID</Command>
+		<Pause>100</Pause>
+  		<Command>60.00    0.40   40.00   10.00 LOW</Command>
+		<Pause>100</Pause>
+  		<Command>40.00    0.30   30.00    0.00 LOW</Command>
+		<Pause>100</Pause>
+  		<Command>20.00    0.20   20.00    0.00 LOW</Command>
+		<Pause>100</Pause>
+		<Command>;</Command>
+	</Table>
+	<Pause>100</Pause>
+	<CURVE>
+		<!User curve 8>
+		<CalCur>CALCUR 8</CalCur>
+		<Pause>100</Pause>
+		<!Curve Name>
+		<CalCur>Test S700</CalCur>
+		<Pause>100</Pause>
+		<!Curve Type>
+		<CalCur>Diode</CalCur> 
+		<Pause>100</Pause>
+		<!Multiplier> 
+		<CalCur>-1.000000</CalCur>
+		<Pause>100</Pause>
+		<!Unit>
+		<CalCur>Volts</CalCur>
+		<Pause>100</Pause>
+		<!Curve Entries> 
+    	<CalCur>0.163300   475.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.173300   470.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.183400   465.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.193500   460.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.203800   455.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.214100   450.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.224600   445.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.235100   440.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.245800   435.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.256500   430.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.267300   425.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.278100   420.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.289100   415.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.300100   410.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.311100   405.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.322200   400.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.333400   395.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.344600   390.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.355800   385.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.367100   380.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.378400   375.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.389700   370.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.401100   365.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.412500   360.000000</CalCur>
+		<Pause>100</Pause>
+   	 	<CalCur>0.423900   355.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.435300   350.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.446700   345.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.458100   340.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.469500   335.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.480800   330.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.492200   325.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.503500   320.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.514800   315.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.526100   310.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.537300   305.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.548500   300.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.559600   295.000000</CalCur>
+    	<Pause>100</Pause>
+    	<CalCur>0.570700   290.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.590000   280.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.613100   270.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.639300   260.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.658600   250.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.680700   240.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.704000   230.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.723800   220.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.746100   210.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.768200   200.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.791600   190.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.813300   180.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.833800   170.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.854700   160.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.875300   150.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.897700   140.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.919800   130.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.937300   120.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.954200   110.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.976800   100.000000</CalCur>
+    	<Pause>100</Pause>
+    	<CalCur>0.986500    95.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>0.995000    90.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.005000    85.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.014400    80.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.024100    75.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.032500    70.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.042000    65.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.050600    60.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.058700    55.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.067300    50.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.075300    45.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.084200    40.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.087000    38.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.090400    36.000000</CalCur
+		<Pause>100</Pause>
+    	<CalCur>1.094100    34.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.097400    32.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.101100    30.000000</CalCur>
+    	<Pause>100</Pause>
+    	<CalCur>1.105400    28.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.110800    26.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.123800    24.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.165000    22.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.207000    20.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.229000    19.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.251000    18.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.272000    17.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.295000    16.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.328000    15.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.365000    14.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.415000    13.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.470000    12.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.527000    11.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.575000    10.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.599000     9.500000</CalCur>
+    	<Pause>100</Pause>
+    	<CalCur>1.623000     9.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.654000     8.500000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.667000     8.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.684000     7.500000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.708000     7.000000</CalCur>
+		<Pause>100</Pause>
+	    <CalCur>1.731000     6.500000</CalCur>
+		<Pause>100</Pause>
+	    <CalCur>1.750000     6.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.769000     5.500000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.785000     5.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.797000     4.750000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.800000     4.500000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.809000     4.250000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.816000     4.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.821000     3.750000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.827000     3.500000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.834000     3.250000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.839000     3.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.846000     2.750000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.852000     2.500000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.856000     2.250000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.859000     2.000000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.863000     1.750000</CalCur>
+		<Pause>100</Pause>
+    	<CalCur>1.866000     1.500000</CalCur>
+		<Pause>100</Pause>
+		<CalCur>;</CalCur>
+	</Curve>
+</Transactions>

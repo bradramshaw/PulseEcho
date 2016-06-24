@@ -1,0 +1,62 @@
+NAME
+	CCM14 - LabView driver for the Cryocon Model 12 temperature monitor
+		using the TCP/IP (LAN) interface.
+		*****Pre-release version for LabView 8.2*****
+SYNOPSIS
+	VIs have a prefix 'CC14'.
+
+DESCRIPTION
+	The Model 14 is a two-channel cryogenic temperature monitor with
+	serial (RS-232) and Ethernet remote interfaces. These drivers
+	support the Ethernet interface.
+
+CONTACT
+	For information or technical support, contact:
+		Cryogenic Control Systems, Inc.
+		PO Box 7012
+		Rancho Santa Fe, CA 92067
+
+		858 756 3900
+
+		techsupport@cryocon.com
+
+FILES
+	CCM14.TXT
+		this file
+	CCM14.llb
+		Library of VIs
+	CCM14U.llb
+		Library of VIs that the end user should not modify directly.
+
+VIs
+	[Application]
+	CC_Icon_Tree.vi
+		A listing of all VIs available in this library.
+	
+	[Low Level]
+	CC Initialize.vi
+		Opens the instrument.
+	
+	CC_Close.vi
+		Closes the instrument.
+
+	CC_IO.vi
+		Sends an ASCII command and returns the instrument's response.
+		Attaches line terminator character to command.
+
+	CC_Read.vi
+		Read string from instrument.
+
+	CC_WriteCmd.vi
+		Write ASCII command string to instrument. String must include
+		terminator character (\n).
+
+	CC_Error.vi
+		Generic error handler.
+
+	CC_Error_Handler.vi
+		Used by CC_Error to handle error messages and request user
+		response.
+	
+-----------------------------------------------------------------------	-
+(c)2007 Cryogenic Control Systems, Inc.
