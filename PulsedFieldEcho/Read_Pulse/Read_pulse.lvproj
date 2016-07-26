@@ -11,12 +11,16 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Gage digitizer actor" Type="Folder">
+			<Item Name="Gage digitizer actor.lvclass" Type="LVClass" URL="../../Pulse Echo Actor Project/Gage digitizer actor/Gage digitizer actor.lvclass"/>
+		</Item>
 		<Item Name="Gage_to_labview_error.vi" Type="VI" URL="../../Gage_to_labview_error.vi"/>
 		<Item Name="Test_program.vi" Type="VI" URL="../Test_program.vi"/>
 		<Item Name="Front_panel.vi" Type="VI" URL="../../Front_panel.vi"/>
 		<Item Name="Control_card.lvclass" Type="LVClass" URL="../Control_card.lvclass"/>
 		<Item Name="Control_interface.lvclass" Type="LVClass" URL="../Control_interface.lvclass"/>
 		<Item Name="Write_data.lvclass" Type="LVClass" URL="../Write_data.lvclass"/>
+		<Item Name="Pulse Recorder.lvclass" Type="LVClass" URL="../../../../Measure_core/Pulse Recorders/Pulse Recorder/Pulse Recorder.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="CsLV.dll" Type="Document" URL="/&lt;userlib&gt;/Gage/CsLV.dll"/>
@@ -58,6 +62,23 @@
 				<Item Name="CsTool-QueryStatus.vi" Type="VI" URL="/&lt;userlib&gt;/Gage/CsTool.llb/CsTool-QueryStatus.vi"/>
 				<Item Name="CsTool-Transfer.vi" Type="VI" URL="/&lt;userlib&gt;/Gage/CsTool.llb/CsTool-Transfer.vi"/>
 			</Item>
+			<Item Name="vi.lib" Type="Folder">
+				<Item Name="Actor Framework.lvlib" Type="Library" URL="/&lt;vilib&gt;/ActorFramework/Actor Framework.lvlib"/>
+				<Item Name="Time-Delay Override Options.ctl" Type="VI" URL="/&lt;vilib&gt;/ActorFramework/Time-Delayed Send Message/Time-Delay Override Options.ctl"/>
+				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
+				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
+				<Item Name="Time-Delayed Send Message.vi" Type="VI" URL="/&lt;vilib&gt;/ActorFramework/Time-Delayed Send Message/Time-Delayed Send Message.vi"/>
+				<Item Name="Time-Delayed Send Message Core.vi" Type="VI" URL="/&lt;vilib&gt;/ActorFramework/Time-Delayed Send Message/Time-Delayed Send Message Core.vi"/>
+			</Item>
+			<Item Name="Measure Object.lvclass" Type="LVClass" URL="../../../../Measure_core/Measure Object/Measure Object.lvclass"/>
+			<Item Name="Result Reply Msg.lvclass" Type="LVClass" URL="../../../../Measure_core/Measure Object Messages/Result Reply Msg/Result Reply Msg.lvclass"/>
+			<Item Name="Acquired Result.lvclass" Type="LVClass" URL="../../../../Measure_core/Results/Acquired Result/Acquired Result.lvclass"/>
+			<Item Name="Self-addressed Msg.lvclass" Type="LVClass" URL="../../../../Measure_core/Measure Object Messages/Self-Addressed Msg/Self-addressed Msg.lvclass"/>
+			<Item Name="AF Debug.lvlib" Type="Library" URL="/&lt;resource&gt;/AFDebug/AF Debug.lvlib"/>
+			<Item Name="Open Item Msg.lvclass" Type="LVClass" URL="../../../../Measure_core/Measure Object Messages/Open Item Msg/Open Item Msg.lvclass"/>
+			<Item Name="Obtain top dispatch vi.vi" Type="VI" URL="../../../../NHMFL_Core/Libraries/Utilities/Obtain top dispatch vi.vi"/>
+			<Item Name="Open Front Panel Msg.lvclass" Type="LVClass" URL="../../../../Measure_core/Measure Object Messages/Open Front Panel Msg/Open Front Panel Msg.lvclass"/>
+			<Item Name="Wait for Trigger Msg.lvclass" Type="LVClass" URL="../../../../Measure_core/Pulse Controller Messages/Wait for Trigger Msg/Wait for Trigger Msg.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
